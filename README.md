@@ -14,7 +14,9 @@ products = [
 
 
 to setup it with crontab start terminal and enter:
-$crontab -e
+> crontab -e
+
+It will open config file.
 
 >
 > 0 * * * *  /usr/bin/python3.8 ./price_tracker/test.py   
@@ -23,7 +25,7 @@ $crontab -e
 
 Check your cron jobs with:
 
-$crontab -l
+>crontab -l
 
 
 
