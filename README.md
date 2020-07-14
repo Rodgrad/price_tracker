@@ -4,8 +4,10 @@ Script to check price manually or with crontab on daily basis from webstore.
 If price have dropped, new entry will be saved to file.
 
 How to use it?
+Keep script in folder  /price_tracker/ best placed as home/price_tracker/tracker.py 
 
-List "products" is where you input your target product url and price in the manner:
+
+Indide tracker.py is List "products", it is where you input your target product urls and price in the manner:
 
 products = [
     [url, price],
