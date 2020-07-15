@@ -5,7 +5,7 @@ If price have dropped, new entry will be saved to file.
 
 # How to use it?
 
-Keep script in folder  /price_tracker/ best placed as home/price_tracker/tracker_public.py 
+Keep script in folder  /price_tracker/ best placed as home/user/price_tracker/tracker_public.py 
 Inside tracker_public.py is List "products", it is where you input your target product urls and price in the manner:
 
 products = [
