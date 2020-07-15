@@ -88,7 +88,7 @@ class Tracker:
             for i in range(len(data)) or range(1):
                 if list[0] in data[i] and list[2] in data[i]:
                     return False
-            print(list)
+            # "Cijena" is just Croatian word for Price
             data =  list[0] + "\n" + "CIJENA " + list[1] + " \n" + "CIJENA S POPUSTOM " + list[2] + "\n" + self.link + "\n "
             file.write("".join(data))
             file.close()
