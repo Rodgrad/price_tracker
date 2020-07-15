@@ -98,7 +98,7 @@ class Tracker:
 
 
 
-# Target items to check
+# Target items to check [url, price]
 products = [
     ["https://www.instar-informatika.hr/mobitel-apple-iphone-11-64gb-red/INS%2D53036/product/", 10000],
     ["https://www.instar-informatika.hr/mobitel-apple-iphone-se-2020-64gb-crni/INS%2D51630/product/", 10000],
