@@ -4,7 +4,8 @@ Script to check webstore prices with cron automatization or manually on daily ba
 
 If price have dropped, new entry will be saved to file.
 
-How to use it?
+#How to use it?
+
 Keep script in folder  /price_tracker/ best placed as home/price_tracker/tracker.py 
 
 
