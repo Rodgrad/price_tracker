@@ -1,6 +1,7 @@
 # price_tracker-cron-mailgun
 
 Script to check webstore prices with cron automatization or manually on daily base.
+
 If price have dropped, new entry will be saved to file.
 
 How to use it?
