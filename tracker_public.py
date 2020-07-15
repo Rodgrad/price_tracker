@@ -108,14 +108,15 @@ products = [
 results = ["Price Tracker ALERT \n\n"]
 
 # Traverse products and check them with Tracker
+match = False
 for i in products:
     main = Tracker([i[0], i[1]])
     status = main.run()
     if status:
         results[0] = results[0] + "\n\n" + status
+        match = True
 
-# If new data match
-if status:
+if match:
     mail = TrackerEmailAlert(results[0])
 else:
     mail = TrackerEmailAlert("Price Tracker NULL \n\n Tracker found no matches.")
