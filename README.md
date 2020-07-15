@@ -25,6 +25,7 @@ Enter path to your Python version and to script tracker.
 > 0 * * * *  /usr/bin/python3.8 ./price_tracker/tracker.py   
 
 ...And save it, this will check lowest price for products at every hour on every day in year.
+And then it will send results to email, with match or null value(null value is just to verify script execution.) 
 
 Check your cron jobs with:
 
