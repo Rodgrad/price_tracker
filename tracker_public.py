@@ -89,7 +89,7 @@ class Tracker:
                 if list[0] in data[i] and list[2] in data[i]:
                     return False
             # "Cijena" is just Croatian word for Price
-            data =  list[0] + "\n" + "CIJENA " + list[1] + " \n" + "CIJENA S POPUSTOM " + list[2] + "\n" + self.link + "\n "
+            data =  "{0} \n CIJENA {1} \n CIJENA S POPUSTOM {2} \n {3} \n ".format(list[0], list[1], list[2], self.link)
             file.write("".join(data))
             file.close()
             return data
