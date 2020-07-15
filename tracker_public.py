@@ -119,7 +119,7 @@ for i in products:
 if match:
     mail = TrackerEmailAlert(results[0])
 else:
-    mail = TrackerEmailAlert("Price Tracker NULL \n\n Tracker found no matches.")
+    mail = TrackerEmailAlert("Price Tracker NULL \n\n Tracker found no matches, but is still ACTIVE and running.")
 
 print("All Done.")
     
