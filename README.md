@@ -2,7 +2,7 @@
 
 Script to check price manually or with crontab on daily basis from webstore.
 
-If price have dropped, new entry will be saved to file.
+If price have dropped, new entry will be saved to file and sent to email address.
 
 # How to use it?
 
