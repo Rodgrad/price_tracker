@@ -51,7 +51,7 @@ Format: ![Alt Text](url)
 
 And this is how it looks in file price_tracker.html, I chose .html file to keep browser only app I need to check all data.
 
-![GitHub Logo](/Screenshot.png)
+![GitHub Logo](/price_tracker_file.png )
 Format: ![Alt Text](url)
 
 
