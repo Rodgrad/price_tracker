@@ -31,7 +31,7 @@ class TrackerEmailAlert:
 class Tracker:
 
     """ 
-        Scrape data from site, extract key parts, compare their validity by price and then save tem to file and email them to recipient.
+        Scrape data from site, extract key parts, compare their validity by price and then save them to file and email them to recipient.
         If data is not valid only email with null match will be sent to recipient.
     """
 
