@@ -75,56 +75,46 @@ class Tracker:
         return False
 
 
-    def resolve_data(self, list):  # If match were made create file, if new data in match is same as data in file, do nothing, else update.
-
-        if not os.path.exists("/home/user/price_tracker/price_tracker.html"):
-            os.mknod("/home/user/price_tracker/price_tracker.html")
+      def resolve_data(self, list):
 
         if list:
-            file = open("/home/user/price_tracker/price_tracker.html", "r+")
+            file = open("/home/luka/price_tracker/price_tracker.html", "r+")
             read = file.read()
             data = str(read).split("<hr>")
-
+            
             for i in range(len(data)) or range(1):
                 if list[0] in data[i] and list[2] in data[i]:
                     return False
-            # "Cijena" is just Croatian word for Price
-            data =  "{0} \n CIJENA {1} \n CIJENA S POPUSTOM {2} \n {3} \n ".format(list[0], list[1], list[2], self.link)
+                
+            data =  "{0} \n CIJENA {1} \n CIJENA S POPUSTOM {2} \n {3} \n <hr>".format(list[0], list[1], list[2], self.link)
             file.write("".join(data))
             file.close()
+            data = data.replace("<hr>", " ")
             return data
         return False
 
 
 
-
-# Target items to check [url, price]
 products = [
-    ["https://www.instar-informatika.hr/mobitel-apple-iphone-11-64gb-red/INS%2D53036/product/", 10000],
-    ["https://www.instar-informatika.hr/mobitel-apple-iphone-se-2020-64gb-crni/INS%2D51630/product/", 10000],
+    ["https://www.instar-informatika.hr/monitor-dell-24-p2421-ipd-hdmi-dp-vga-dvi-pivot-1920x1200/P2421/product/", 2450],
+    ["https://www.instar-informatika.hr/gaming-stolica-canyon-cnd-sgch5-maxi-ponuda/CND%2DSGCH5/product/", 2300],
     
     ]
-# Holder for data to be mailed    
 results = ["Price Tracker ALERT \n\n"]
-
-# Traverse products and check them with Tracker
-match = False
+match=False
 for i in products:
     main = Tracker([i[0], i[1]])
     status = main.run()
     if status:
         results[0] = results[0] + "\n\n" + status
-        match = True
+        match=True
 
 if match:
     mail = TrackerEmailAlert(results[0])
 else:
-    mail = TrackerEmailAlert("Price Tracker NULL \n\n Tracker found no matches, but is still ACTIVE and running.")
+    mail = TrackerEmailAlert("Price Tracker NULL \n\n Tracker found no matches.")
 
 print("All Done.")
     
-    
-
-
 
   
