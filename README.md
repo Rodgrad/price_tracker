@@ -1,4 +1,4 @@
-# PriceTracker
+# PriceTracker with cron and Mailgun
 
 Script to check price manually or with crontab on daily basis from webstore.
 
