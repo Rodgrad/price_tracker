@@ -75,21 +75,27 @@ class Tracker:
         return False
 
 
-      def resolve_data(self, list):
+    def resolve_data(self, list):
 
         if list:
             file = open("/home/luka/price_tracker/price_tracker.html", "r+")
             read = file.read()
             data = str(read).split("<hr>")
-            
+
             for i in range(len(data)) or range(1):
                 if list[0] in data[i] and list[2] in data[i]:
                     return False
-                
-            data =  "{0} \n CIJENA {1} \n CIJENA S POPUSTOM {2} \n {3} \n <hr>".format(list[0], list[1], list[2], self.link)
-            file.write("".join(data))
+            print(list[0])
+            data =  "{0} \n CIJENA: {1} \n CIJENA S POPUSTOM: {2} \n TARGET: {3} \n {4} \n".format(list[0], list[1], list[2], self.target_price, self.link)
+            html_data = """
+                         <h3 style='color:black; background:yellow; border:1px dashed black; padding:4px;'> {0} </h3> <br>
+                         <p style='color:gray;'> CIJENA {1} </p> 
+                         <p style='color:green;'>CIJENA S POPUSTOM {2}</p> 
+                         <h5 style='color:green;'>TARGET: {3}</h5>
+                         <p><a style='color:#6e95d4;' href='{4}'</a>{4}</p>
+                         <hr>""".format( list[0], list[1], list[2], self.target_price, self.link)
+            file.write("".join(html_data))
             file.close()
-            data = data.replace("<hr>", " ")
             return data
         return False
 
