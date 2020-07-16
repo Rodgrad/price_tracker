@@ -10,10 +10,10 @@ Keep script in folder  /price_tracker/ best placed as home/user/price_tracker/tr
 
 Inside tracker_public.py is List "products", it is where you input your target product urls and price in the manner:
 
-products = [
-    [url, price],
-    [url, price]
-]
+>products = [
+>    [url, price],
+>    [url, price]
+>]
 
 
 # Price_tracker-cron
