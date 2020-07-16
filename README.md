@@ -1,6 +1,6 @@
 # PriceTracker with cron and Mailgun
 
-Script to check price manually or with crontab on daily basis from webstore.
+Script to check webstore prices by cron automatization or manually at chosen time.
 
 If price have dropped, new entry will be saved to file and sent to email address.
 
