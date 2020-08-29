@@ -102,8 +102,8 @@ class Tracker:
 
 
 products = [
-    ["https://www.instar-informatika.hr/monitor-dell-24-p2421-ipd-hdmi-dp-vga-dvi-pivot-1920x1200/P2421/product/", 2450],
-    ["https://www.instar-informatika.hr/gaming-stolica-canyon-cnd-sgch5-maxi-ponuda/CND%2DSGCH5/product/", 2300],
+    ["https://www.SOME_WEB_STORE-informatika.hr/monitor-dell-24-p2421-ipd-hdmi-dp-vga-dvi-pivot-1920x1200/P2421/product/", 2450],
+    ["https://www.SOME_WEB_STORE-informatika.hr/gaming-stolica-canyon-cnd-sgch5-maxi-ponuda/CND%2DSGCH5/product/", 2300],
     
     ]
 results = ["Price Tracker ALERT \n\n"]
